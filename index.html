@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>進貨與發票作業互動學習</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <p class="eyebrow">7 月起作業宣導</p>
+      <h1>進貨、發票與送交會計互動學習</h1>
+    </div>
+    <div class="scorebox" aria-live="polite">
+      <span>學習進度</span>
+      <strong id="progressText">0%</strong>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="heroText">
+        <h2 id="hero-title">從「送出前確認」開始，降低退件、帳務錯誤與付款延誤。</h2>
+        <p>會計不再逐筆檢查進貨單品名內容後，倉庫與採購需要各自完成必要確認。請依角色完成學習、檢核與測驗。</p>
+      </div>
+      <div class="quickRules" aria-label="三個核心原則">
+        <div><span>1</span>文件版本要最新</div>
+        <div><span>2</span>發票與系統要一致</div>
+        <div><span>3</span>退件回覆要準時</div>
+      </div>
+    </section>
+
+    <section class="toolbar" aria-label="角色切換">
+      <button class="tab active" data-role="warehouse" type="button">倉庫作業</button>
+      <button class="tab" data-role="purchase" type="button">採購作業</button>
+      <button class="tab" data-role="accounting" type="button">會計時限</button>
+    </section>
+
+    <section class="rolePanel" id="rolePanel" aria-live="polite"></section>
+
+    <section class="practiceGrid">
+      <article class="panel">
+        <div class="sectionHead">
+          <p class="eyebrow">互動檢核</p>
+          <h2>送出前檢查清單</h2>
+        </div>
+        <div id="checklist" class="checklist"></div>
+      </article>
+
+      <article class="panel">
+        <div class="sectionHead">
+          <p class="eyebrow">情境判斷</p>
+          <h2>遇到這種狀況怎麼做？</h2>
+        </div>
+        <div id="scenario" class="scenario"></div>
+      </article>
+    </section>
+
+    <section class="quiz panel" aria-labelledby="quiz-title">
+      <div class="sectionHead">
+        <p class="eyebrow">學習測驗</p>
+        <h2 id="quiz-title">5 題快速確認</h2>
+      </div>
+      <div id="quizList"></div>
+      <button class="primaryBtn" id="submitQuiz" type="button">查看測驗結果</button>
+      <p class="result" id="quizResult" aria-live="polite"></p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
